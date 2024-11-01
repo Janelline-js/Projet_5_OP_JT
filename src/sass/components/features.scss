@@ -1,0 +1,140 @@
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    &_kasa {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h1 {
+            color: #fe6060;
+            font-weight: 400;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 0.8em;
+            font-weight: 400;
+        }
+
+        &_tags {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            font-size: 0.8em;
+            gap: 0.8em;
+            list-style-type: none;
+            padding-inline-start: 0;
+
+
+            li {
+                background-color: #fe6060;
+                color: white;
+                padding: 0.1em 1.5em 0.2em;
+
+                border-radius: 0.6em;
+            }
+        }
+    }
+
+    &_host {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        color: #fe6060;
+        width: 100%;
+
+
+        img {
+            border-radius: 3em;
+            width: 3.5em;
+            height: 3.5em;
+        }
+
+        &_portrait {
+            font-family: "Montserrat";
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+
+
+
+
+        }
+
+        &_rating {
+            font-size: 1em;
+
+            i {
+                padding-left: 0.2em;
+            }
+
+            &_nones {
+                color: #E3E3E3;
+            }
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .features {
+        flex-direction: row;
+
+        &_kasa {
+            width: 70%;
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+        }
+
+        &_host {
+            height: 100%;
+            flex-direction: column;
+            align-items: flex-end;
+            width: unset;
+            gap: 1em;
+
+            &_portrait {
+                
+                
+                justify-content: flex-end;
+
+                gap: 1em;
+                
+
+                p {direction:rtl;
+                    
+                    margin-left: 20%;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            &_rating {
+                display: flex;
+                justify-content: flex-end;
+                font-size: 1.6em;
+
+                i {
+                    padding-left: 0.5em;
+                }
+            }
+        }
+    }
+}

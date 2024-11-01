@@ -1,0 +1,116 @@
+.collapser-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+
+
+    &_about {
+        margin-top: 2em;
+        align-items: center;
+        width: 100%;
+
+        .collapser {
+            margin-bottom: 0.5em;
+        }
+    }
+
+
+    &_features {
+        width: 100%;
+        justify-content: space-between;
+        gap: 1em;
+
+        .collapser {
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+
+    .collapser {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+
+        .collapse {
+            display: flex;
+            border-radius: 0.4em;
+            border: none;
+            color: white;
+            padding: 0em 1em;
+            font-weight: 600;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fe6060;
+
+            & i {
+                transition: transform 220ms ease-in-out
+            }
+
+            &_open {
+                transition-property: transform;
+                transition-duration: 400ms;
+                transform: rotate(180deg);
+
+
+            }
+
+        }
+
+        .slider {
+            background-color: #FBFBFB;
+            padding: 0.6em 1em;
+            border-radius: 0 0em 0.3em 0.3em;
+            margin: 0;
+            font-size: 0.8em;
+            overflow: hidden;
+            transition: all 330ms ease-in-out;
+            transform: translateY(-110%);
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            flex-basis: 0;
+
+            &_open {
+                flex-basis: content;
+                transform: translateY(0);
+            }
+
+        }
+    }
+
+
+}
+
+
+
+
+
+
+@media (min-width: 767.98px) {
+
+
+    .collapser-wrapper {
+
+        
+        &_about {
+            .collapser {
+                width: 90%;
+            }
+        }
+
+        &_features {
+            flex-direction: row;
+        }
+
+        .collapser{
+            .collapse{
+                font-size: 0.7em;
+            }
+        }
+    }
+}
