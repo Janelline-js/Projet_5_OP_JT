@@ -1,8 +1,6 @@
 .menu_card {
-    overflow: auto;
     display: grid;
     width: 100%;
-    height: 40em;
     justify-content: center;
     grid-template-columns: 100%;
     grid-auto-rows: 15em;
@@ -23,13 +21,25 @@
     color: white;
     font-size: larger;
     padding: 0.6em;
+    position: relative;
+    overflow: hidden;
 
     p {
+        position: relative;
+        z-index: 10;
         margin: 0;
         width: 80%;
 
     }
-
+    &_img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 

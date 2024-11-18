@@ -29,7 +29,7 @@ const KazasList = () => {
                 <p>Aucun logement disponible pour le moment...</p>
             : KazasList.map((data,index) => {
                 return (
-                    <CardComponent key={data.id} id={data.id} title={data.title}  />
+                    <CardComponent key={data.id} id={data.id} title={data.title} image={data.cover} />
                 )
             })}
         </div>
